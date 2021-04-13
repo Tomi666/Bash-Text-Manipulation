@@ -1,0 +1,8 @@
+Get first names:
+jq -r '.employees[].firstName' employees.json
+
+Get first names and phone number(s):
+jq -r '.employees[] | [.firstName,.phoneNumbers[].number] | @tsv' employees.json
+
+Get first names and mobile phone number(s):
+jq -r '.employees[] | [.firstName,(.phoneNumbers[] | select(.type=="mobile").number)] | @tsv' employees.json
