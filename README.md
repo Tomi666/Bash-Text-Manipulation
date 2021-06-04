@@ -41,24 +41,3 @@ Create a new directory and copy the files `access.log` and `employees.json` insi
 Create a tar archive of the directory created in the previous step. Compare the size of the tar file and the size of the directory. Remove the tar file.
 Create a tar.gz compressed archive of the directory created in a previous step. Compare the size of the compressed archive and the directory. Remove the tar.gz file.
     - A compressed archive is generated. Student has identified the differences between file archiving and file compressing.
-
-## General requirements
-
-None
-
-## Hints
-
-- Use `sed` with a regular expression (you can create your own or you can find one online) for the IP address.
-- You can set the delimiter for `awk` to be `"`.
-- Use `head` to output the first 20 lines of the file, then pipe the output to `tail` to print the last 10 lines, which will give you lines between 11 and 20 from the file.
-- Notice the difference between the archiving and compressing tools. `tar` can preserve directory structure and permissions while the tools for compressing operate on the files directly. Another difference is that by default `gzip` and `bzip2` do not keep the original files (it can be achieved by passing the -k or --keep option) while `tar` keeps the the original files and directories. 
-
-## Background materials
-
-- <i class="far fa-exclamation"></i> [How to Use the sed Command on Linux](https://www.howtogeek.com/666395/how-to-use-the-sed-command-on-linux/)
-- <i class="far fa-exclamation"></i> [How to Use the awk Command on Linux](https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/)
-- <i class="far fa-exclamation"></i> [How to Use the grep Command on Linux](https://www.howtogeek.com/496056/how-to-use-the-grep-command-on-linux/)
-- <i class="far fa-exclamation"></i> [How to Use the tail Command on Linux](https://www.howtogeek.com/481766/how-to-use-the-tail-command-on-linux/)
-- <i class="far fa-exclamation"></i> [Guide to Linux jq Command for JSON Processing](https://www.baeldung.com/linux/jq-command-json)
-- <i class="far fa-exclamation"></i> [How to use gzip and bzip2 Linux commands Explained](https://www.computernetworkingnotes.com/linux-tutorials/how-to-use-gzip-and-bzip2-linux-commands-explained.html)
-- <i class="far fa-exclamation"></i> [18 Tar Command Examples in Linux](https://www.tecmint.com/18-tar-command-examples-in-linux/)
